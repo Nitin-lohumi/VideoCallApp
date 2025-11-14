@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 function App() {
   const [isConnected, setIsConnected] = useState(false);
   const [activeUsers, setActiveUser] = useState(0);
-  const server = useMemo(() => io("http://localhost:2000"), []);
+  const server = useMemo(() => io("https://videocallapp-8p0d.onrender.com/"), []);
   const [id, setId] = useState("");
   useEffect(() => {
     server.on("toatalUserInWebSite", (number) => {
